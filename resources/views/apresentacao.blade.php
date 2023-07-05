@@ -29,18 +29,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="overflow: hidden;">
-    <header>
-     
-    </header>
-
+<body>
     <main class="mt-5 pt-1">
 
-        <div class="container">
-            
-            
+        <div class="container"> 
             <section>
-
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
                     <div class="carousel-inner">
 
@@ -56,7 +49,6 @@
                             <img src="imagens/landscape header2.jpg" class="d-block w-100" alt="...">
                         </div>
 
-                      
                     </div>
 
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -74,7 +66,7 @@
         </div>
 
 
-    <div class="text-center p-3">
+    <div class="text-center p-2 fs-6">
     
             <p>
                     Sabe aquela vontade de viajar que preenche nossa rotina eventualmente? Aquele momento em

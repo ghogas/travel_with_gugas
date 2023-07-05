@@ -23,12 +23,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body background="/public/imagens/wallpaper.jpg">
+<body>
 
     <header>
-        <!-- <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-light bg-dark">
             <div class="container">
-                <a class="navbar-brand text-light  " href="#">TravelWithGugas</a>
+                <a class="navbar-brand text-light" href="#">TravelWithGugas</a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -50,53 +50,23 @@
                             <a class="nav-link text-light" href="{{route('configuracoes')}}">Configurações</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </nav> -->
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <!-- Container wrapper -->
-                <div class="container-fluid">
-                <!-- Toggle button -->
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <i class="fas fa-bars"></i>
-                </button>
-            
-                <!-- Collapsible wrapper -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Navbar brand -->
-                        <a class="navbar-brand mt-2 mt-lg-0 text-center">
-                        
-                            <img
-                                src="logob&w.png"
-                                height="70"
-                                alt="TWG Logo"
-                                loading="lazy"
-                            /><h6>TravelWithGugas</h6> 
-
-                        </a>
-                        <ul class="nav-item">
-                            <a class="nav-link" href="{{route('privacidade')}}">Privacidade</a>
-                        </ul>
-                        <ul class="nav-item">
-                            <a class="nav-link" href="{{route('configuracoes')}}">Configurações</a>
-                        </ul>
+                    <div class="p-3">
+                        <button type="button" class=" nav-item btn btn-light">
+                            <a class="nav-link text-dark" href="#">Login</a>
+                        </button>
+                        <button type="button" class=" nav-item btn btn-light">
+                            <a class="nav-link text-dark" href="#">Cadastro</a>
+                        </button>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
+        <!-- Navbar -->
 
     </header>
 
     <main>
-        <section class="p-5">
+        <section class="p-4">
             @yield('conteudo')
 
         </section>
@@ -105,7 +75,7 @@
 
     <footer class="text-center">
 
-        Desenvolvido por Gustavo Henrique dos Santos Carvalho
+         <h6>Desenvolvido por Gustavo Henrique dos Santos Carvalho</h6>
 
     </footer>
 
