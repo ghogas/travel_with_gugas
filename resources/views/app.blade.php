@@ -104,7 +104,13 @@
 
     <!-- JS personalizado -->
     <script src="js/code.js"></script>
+    
+    <!-- Replace version in the URL with desired library version -->
+    <!-- Include SDK's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/<version>/maps/maps.css" />
+    <!-- Include JavaScript SDK -->
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/<version>/maps/maps-web.min.js"></script>
 
-</body>
+    </body>
 
 </html>
