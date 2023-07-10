@@ -23,19 +23,17 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<!-- background-color: #cec7b6; -->
+<body">
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #312c20; border-color: #000;">
             <div class="container">
-                <a class="navbar-brand text-light" href="#">TravelWithGugas</a>
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand text-light">TravelWithGugas</a>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active text-light" href="#" aria-current="page">Inicio<span class="visually-hidden">(current)</span></a>
+                            <a class="nav-link active text-light" href="{{route('dashboard')}}" aria-current="page">Inicio<span class="visually-hidden">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="{{route('contato')}}">Contato</a>
@@ -49,13 +47,22 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="{{route('configuracoes')}}">Configurações</a>
                         </li>
+                        <li>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <a class="nav-link text-light" href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit(); " role="button">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    {{ __('Log Out') }}
+                                </a>
+                            </form>
+                        </li>
                     </ul>
                     <div class="p-3">
                         <button type="button" class=" nav-item btn btn-light">
-                            <a class="nav-link text-dark" href="#">Login</a>
+                            <a class="nav-link text-dark" href="{{route('login')}}">Login</a>
                         </button>
                         <button type="button" class=" nav-item btn btn-light">
-                            <a class="nav-link text-dark" href="#">Cadastro</a>
+                            <a class="nav-link text-dark" href="{{route('register')}}">Cadastro</a>
                         </button>
                     </div>
                 </div>
@@ -75,7 +82,7 @@
 
     <footer class="text-center">
 
-         <h6>Desenvolvido por Gustavo Henrique dos Santos Carvalho</h6>
+        <h6>Desenvolvido por Gustavo Henrique dos Santos Carvalho</h6>
 
     </footer>
 

@@ -29,48 +29,11 @@
 <body background="imagens/wallpaper.jpg">
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">TravelWithGugas</a>
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" aria-current="page">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{{route('contato')}}">Contato<span class="visually-hidden">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('portifolio')}}">Portifólio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('privacidade')}}">Privacidade</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('configuracoes')}}">Configurações</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex my-2 my-lg-0">
-                        <input class="form-control me-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        
     </header>
 
 
     <main>
-        <div class="container p-3">
-            <div class="row align-items-start">
-                <div class="col bg-dark text-white">
-                    <p> Ás vezes sabemos o quanto precisamos de férias, entretanto, escolher o local perfeito para passar essa nova aventura pode ser desafiador, por isso, o Travel With Gugas disponibilizou um portifólio contendo destinos diversos proporcionando dicas para auxiliar você na dúvida para onde ir</p>
-                </div>
-            </div>
-        </div>
         <section class="p-3">
         <div class="container p-3">
             <div class="row align-items-start">

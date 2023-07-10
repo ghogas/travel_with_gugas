@@ -1,9 +1,5 @@
-
-
-
-
-
-
-
-
-
+body {
+    background-image: url("https://img.freepik.com/fotos-gratis/fundo-gradiente-suave-bege-em-estilo-vintage_53876-108718.jpg?size=626&ext=jpg&ga=GA1.2.1366079772.1689010141&semt=ais");
+    background-repeat: no-repeat, repeat-x;
+    background-size: cover;
+}
