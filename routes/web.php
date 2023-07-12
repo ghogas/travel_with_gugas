@@ -20,9 +20,6 @@ Route::get('/', function () {
 Route::get('/privacidade', function(){
     return view('privacidade');
 })->name('privacidade');
-Route::get('/configuracoes', function(){
-    return view('configuracoes');
-})->name('configuracoes');
 
 Route::middleware([
     'auth:sanctum',
@@ -44,5 +41,13 @@ Route::middleware([
     Route::get('/pesquisa', function(){
         return view('pesquisa');
     })->name('pesquisa');
-    
+    Route::get('/configuracoes', function(){
+        return view('configuracoes');
+    })->name('configuracoes');
+    Route::get('/perfil', function(){
+        return view('perfil');
+    })->name('perfil');
+    Route::get('/roteiros', function(){
+        return view('roteiros');
+    })->name('roteiros');
 });

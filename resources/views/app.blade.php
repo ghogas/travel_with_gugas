@@ -29,6 +29,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #312c20; border-color: #000;">
             <div class="container">
+                <img src="{{url('/')}}/imagens/logob&w.png" width="90" class="img-fluid rounded-start" alt="">
                 <a class="navbar-brand text-light">TravelWithGugas</a>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
@@ -104,7 +105,7 @@
 
     <!-- JS personalizado -->
     <script src="js/code.js"></script>
-    
+
     <!-- Replace version in the URL with desired library version -->
     <!-- Include SDK's stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/<version>/maps/maps.css" />
