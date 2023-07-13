@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoteirosController;
+use App\Models\Roteiro;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,7 @@ Route::get('/', function () {
     return view('apresentacao');
 });
 
-Route::get('/privacidade', function(){
+Route::get('/privacidade', function () {
     return view('privacidade');
 })->name('privacidade');
 
@@ -29,25 +31,33 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::get('/portifolio', function(){
+    Route::get('/portifolio', function () {
         return view('portifolio');
     })->name('portifolio');
-    Route::get('/contato', function(){
+    Route::get('/contato', function () {
         return view('contato');
     })->name('contato');
-    Route::get('/resultado', function(){
+    Route::get('/resultado', function () {
         return view('resultado');
     })->name('resultado');
-    Route::get('/pesquisa', function(){
+    Route::get('/pesquisa', function () {
         return view('pesquisa');
     })->name('pesquisa');
-    Route::get('/configuracoes', function(){
+    Route::get('/configuracoes', function () {
         return view('configuracoes');
     })->name('configuracoes');
-    Route::get('/perfil', function(){
+    Route::get('/perfil', function () {
         return view('perfil');
     })->name('perfil');
-    Route::get('/roteiros', function(){
+    Route::get('/roteiros', function () {
         return view('roteiros');
     })->name('roteiros');
+    Route::post('/novoroteiro', [
+        RoteirosController::class,
+        'store'
+    ])->name('novoroteiro');
+    Route::post('/listroteiros', [
+        RoteirosController::class,
+        'read'
+    ])->name('listroteiros');
 });
