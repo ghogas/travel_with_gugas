@@ -35,6 +35,7 @@ class RoteirosController extends Controller
         $roteiros->dinheiro = $request->dinheiro;
         $roteiros->tipo = $request->tipo;
         $roteiros->descricao = $request->descricao;
+        $roteiros->user_id = auth()->user()->id;
         $roteiros->save();
         return redirect('dashboard');
     }
@@ -88,11 +89,21 @@ class RoteirosController extends Controller
     public function getRoteiros()
     {
         $user = auth()->user();
-        $roteiros = Roteiros::where(`destino`,`estadia`,`dinheiro`,`tipo`,`descricao`)->where('id', $user->id)->get();
+        $roteiros = Roteiros::where(`destino`,`estadia`,`dinheiro`,`tipo`,`descricao`)->where('user_id', $user->id)->get();
 
         $parametros = [
         'roteiros'=> $roteiros,
         ];
         return view('roteiros', $parametros);
+    }
+    public function getUsuario()
+    {
+        $user = auth()->user();
+        $usuarios = Roteiros::where(`name`,`email`)->where('user_id', $user->id)->get();
+
+        $parametros = [
+        'usuario'=> $usuarios,
+        ];
+        return view('perfil', $parametros);
     }
 }
