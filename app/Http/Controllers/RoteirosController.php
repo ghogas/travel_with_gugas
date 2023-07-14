@@ -12,8 +12,8 @@ class RoteirosController extends Controller
      */
     public function index()
     {
-        $roteiros = Roteiros::orderBy('destino', 'tipo')->get();
-        return view('dashboard', ['roteiros' => $roteiros]);
+        // $roteiros = Roteiros::orderBy('destino', 'estadia','dinheiro','tipo','descricao')->get();
+        // return view('dashboard', ['roteiros' => $roteiros]);
     }
 
     /**
@@ -45,20 +45,21 @@ class RoteirosController extends Controller
 
     public function read(Roteiros $roteiros)
     {
-        $user = auth()->user()->id;
-        //Carrega as despesas na variável
-        //Select where
-        $roteiros = Roteiros::where('destino','estadia','dinheiro','tipo','descricao')->where('user_id', $user)->get();
+        // $user = auth()->user()->id;
+        // //Carrega os roteiros na variável
+        // //Select where
+        // $roteiros = Roteiros::where('destino', 'estadia', 'dinheiro', 'tipo', 'descricao' )->where('id', $user)->get();
 
-        $totroteiros = Roteiros::where('destino','estadia','dinheiro','tipo','descricao')->where('user_id', $user)->sum('valor');
-        
-        //carrega a VIEW passando os dados consultados
-        $dados = [
-            'roteiros' => $roteiros, 
-            'totroteiros' => $totroteiros,
-        ];
-        return view('roteiros', $dados);
+        // $totRoteiros = Roteiros::where('destino', 'estadia', 'dinheiro', 'tipo', 'descricao')->where('id', $user)->sum('dinheiro');
+
+        // //carrega a VIEW passando os dados consultados
+        // $dados = [
+        //     'roteiros' => $roteiros,
+        //     'totRoteiros' => $totRoteiros
+        // ];
+        // return view('roteiros', $dados);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -82,5 +83,16 @@ class RoteirosController extends Controller
     public function destroy(Roteiros $roteiros)
     {
         //
+    }
+
+    public function getRoteiros()
+    {
+        $user = auth()->user();
+        $roteiros = Roteiros::where(`destino`,`estadia`,`dinheiro`,`tipo`,`descricao`)->where('id', $user->id)->get();
+
+        $parametros = [
+        'roteiros'=> $roteiros,
+        ];
+        return view('roteiros', $parametros);
     }
 }
