@@ -65,7 +65,7 @@ class RoteirosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Roteiros $roteiros)
+    public function edit()
     {
         //
     }
@@ -73,37 +73,25 @@ class RoteirosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Roteiros $roteiros)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Roteiros $roteiros)
+    public function destroy()
     {
-        //
+        // Roteiros::findOrFail($id)->delete();
+        // return redirect('/roteiros');
     }
 
     public function getRoteiros()
     {
         $user = auth()->user();
-        $roteiros = Roteiros::where(`destino`,`estadia`,`dinheiro`,`tipo`,`descricao`)->where('user_id', $user->id)->get();
+        $roteiros = Roteiros::where(`destino`, `estadia`, `dinheiro`, `tipo`, `descricao`)->where('user_id', $user->id)->get();
 
         $parametros = [
-        'roteiros'=> $roteiros,
+            'roteiros' => $roteiros,
         ];
         return view('roteiros', $parametros);
     }
-    public function getUsuario()
-    {
-        $user = auth()->user();
-        $usuarios = Roteiros::where(`name`,`email`)->where('user_id', $user->id)->get();
 
-        $parametros = [
-        'usuario'=> $usuarios,
-        ];
-        return view('perfil', $parametros);
-    }
 }

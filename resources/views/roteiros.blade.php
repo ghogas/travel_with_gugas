@@ -23,9 +23,7 @@
                 <div class="row gx-5">
                     <div class="col">
                         <div class="card-header bg-dark text-light fw-bold">
-                            {{$roteiro->destino}}<br>
-                            <a href="#"><i class="fas fa-edit text-light"></i></a> &nbsp; &nbsp;
-                            <a href="#"><i class="fas fa-trash-alt text-light"></i></a>
+                            {{$roteiro->destino}}
                         </div>
                         <div class="card-body">
                             {{$roteiro->estadia}}

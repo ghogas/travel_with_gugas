@@ -56,10 +56,6 @@ Route::middleware([
         RoteirosController::class,
         'store'
     ])->name('novoroteiro');
-    // Route::post('/listroteiros', [
-    //     RoteirosController::class,
-    //     'read'
-    // ])->name('listroteiros');
     Route::middleware(['auth:sanctum', 'verified'])
         ->get('/roteiros', [RoteirosController::class, 'getRoteiros'])
         ->name('roteiros');
